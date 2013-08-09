@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The Android Open-Source Project
+# Copyright 2013 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,8 +13,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+$(call inherit-product, vendor/my/common/common.mk)
+$(call inherit-product, device/samsung/maguro/full_maguro.mk)
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_maguro.mk \
-    $(LOCAL_DIR)/full_maguro.mk \
-    $(LOCAL_DIR)/my_maguro.mk
+PRODUCT_NAME := my_maguro
+PRODUCT_BRAND := google
+PRODUCT_MODEL := Galaxy Nexus
+PRODUCT_MANUFACTURER := samsung
+
+PRODUCT_NAME_OVERRIDE := takju
